@@ -1,9 +1,10 @@
 extends CharacterBody2D
 
 
-const SPEED = 50.0
 const JUMP_VELOCITY = -400.0
+var SPEED = 50.0
 var direction = -1
+@onready var anim = $Animacao as AnimatedSprite2D
 
 
 
@@ -22,3 +23,8 @@ func _physics_process(delta: float) -> void:
 
 
 	move_and_slide()
+
+
+func _on_animacao_animation_finished() -> void:
+	if($Animacao.animation == "Hit"):
+		queue_free()

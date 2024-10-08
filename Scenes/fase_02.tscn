@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=4 uid="uid://dhwybormdquse"]
+[gd_scene load_steps=10 format=4 uid="uid://dhwybormdquse"]
 
 [ext_resource type="Script" path="res://Scripts/fase_02.gd" id="1_0fgpq"]
 [ext_resource type="Texture2D" uid="uid://kpcn1gqkswf2" path="res://Assets/Terrain/Terrain (16x16).png" id="1_ouxor"]
@@ -6,6 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dytlwqfwxpjm0" path="res://Scenes/banana.tscn" id="3_3kra6"]
 [ext_resource type="PackedScene" uid="uid://bexe7uwlylp83" path="res://Scenes/cherrie.tscn" id="5_nk3f4"]
 [ext_resource type="PackedScene" uid="uid://cjnl6vy5po5rr" path="res://Scenes/mushroom.tscn" id="6_xn21q"]
+[ext_resource type="PackedScene" uid="uid://dtcn6ayjmhniy" path="res://Scenes/chicken.tscn" id="7_w20x1"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_ol3eb"]
 texture = ExtResource("1_ouxor")
@@ -268,3 +269,6 @@ position = Vector2(286, 66)
 
 [node name="Mushroom" parent="Enemies" instance=ExtResource("6_xn21q")]
 position = Vector2(500, 432)
+
+[node name="Chicken" parent="Enemies" instance=ExtResource("7_w20x1")]
+position = Vector2(168, 430)

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://us3ij1icxufb"]
+
+[ext_resource type="Script" path="res://Scripts/hit_enemy.gd" id="1_82kmu"]
+
+[sub_resource type="SegmentShape2D" id="SegmentShape2D_hlxx3"]
+b = Vector2(16, 0)
+
+[node name="HitEnemy" type="Area2D"]
+script = ExtResource("1_82kmu")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("SegmentShape2D_hlxx3")
+debug_color = Color(0.823529, 0, 0.819608, 0.686275)
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://d1bhtno3hkcpx"]
+
+[ext_resource type="Script" path="res://Scripts/hit.gd" id="1_vjdkg"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_nslta"]
+size = Vector2(29, 13)
+
+[node name="HitPlayer" type="Area2D"]
+script = ExtResource("1_vjdkg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.5, 9.5)
+shape = SubResource("RectangleShape2D_nslta")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

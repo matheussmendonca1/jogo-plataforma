@@ -1,10 +1,11 @@
-[gd_scene load_steps=25 format=3 uid="uid://bmqyfbqcm2kjt"]
+[gd_scene load_steps=26 format=3 uid="uid://bmqyfbqcm2kjt"]
 
 [ext_resource type="Script" path="res://Scripts/pig.gd" id="1_asurb"]
 [ext_resource type="Texture2D" uid="uid://b83vvxg68nsnp" path="res://Assets/Enemies/AngryPig/Hit 1 (36x30).png" id="2_1umds"]
 [ext_resource type="Texture2D" uid="uid://sbdcn3hdsv5a" path="res://Assets/Enemies/AngryPig/Run (36x30).png" id="3_os4wj"]
 [ext_resource type="PackedScene" uid="uid://us3ij1icxufb" path="res://Scenes/hit_enemy.tscn" id="4_rcdun"]
 [ext_resource type="AudioStream" uid="uid://0wvhhvv7pd18" path="res://Assets/Sounds/hitEnemie.wav" id="5_lr8l3"]
+[ext_resource type="PackedScene" uid="uid://d1bhtno3hkcpx" path="res://Scenes/hit_player.tscn" id="6_lijir"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_4r4ta"]
 atlas = ExtResource("2_1umds")
@@ -166,6 +167,8 @@ position = Vector2(-7, -10)
 
 [node name="Sound" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("5_lr8l3")
+
+[node name="HitPlayer" parent="." instance=ExtResource("6_lijir")]
 
 [connection signal="animation_finished" from="Animacao" to="." method="_on_animacao_animation_finished"]
 [connection signal="body_entered" from="HitEnemy" to="." method="_on_hit_enemy_body_entered"]

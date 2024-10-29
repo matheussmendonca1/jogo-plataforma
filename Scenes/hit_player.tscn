@@ -6,6 +6,7 @@
 size = Vector2(29, 13)
 
 [node name="HitPlayer" type="Area2D"]
+collision_layer = 4
 script = ExtResource("1_vjdkg")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
